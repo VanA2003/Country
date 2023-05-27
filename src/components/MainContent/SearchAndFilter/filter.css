@@ -1,0 +1,57 @@
+.filter {
+    max-width: 160px;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.filter h3 {
+    font-size: 18px;
+    font-weight: 60;
+    text-shadow: var(--TextShadow);
+}
+
+.selectpane {
+    width: 100%;
+    margin-top: 8px;
+    position: relative;
+    
+}
+
+#select {
+    padding: 0 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 4px;
+    height: 34px;
+    user-select: none;
+    box-shadow: var(--BoxShadow);
+}
+
+#optionpane {
+    width: 100%;
+    margin-top: 2px;
+    border-radius: 4px;
+    position: absolute;
+    overflow: hidden;
+    z-index: 10;
+}
+
+#optionitem {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    padding: 4px 8px;
+
+}
+
+.optionitem span {
+    margin-left: 4px;
+}
+
+.optionitem:hover {
+    font-weight: 700;
+    background: var(--SelectOptionBackground);
+}

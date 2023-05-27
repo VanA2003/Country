@@ -1,25 +1,32 @@
-import logo from './logo.svg';
+import { useContext } from 'react';
 import './App.css';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Header from './components/Header';
+import MainContent from './components/MainContent';
+import ContentContainer from './components/MainContent/ContentContainer';
+import { ThemeContext } from './components/ThemContext/ThemContext';
+import CountryDetail from './components/MainContent/CountryDetail/index.js';
+import Footer from './components/Footer';
 
 function App() {
+  const ThemContext = useContext(ThemeContext)
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div id="App" className={ThemContext.theme}>
+      <Router>
+        <Header/>
+        <ContentContainer>
+        <Routes>
+          <Route exact path='/' element={<MainContent/>}/>
+          <Route exact path='/region/:regionName' element={<MainContent/>}/>
+          <Route exact path='/country/:countryName' element={<CountryDetail/>}/>
+          <Route exact path='/search/:name' element={<MainContent/>}/>
+        </Routes>
+        </ContentContainer>
+        <Footer/>
+      </Router>
     </div>
   );
 }
 
 export default App;
+

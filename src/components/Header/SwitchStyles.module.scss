@@ -1,0 +1,40 @@
+.toogleButton {
+    height: 28px;
+    width: 60px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2px 4px;
+    box-shadow : 0 4px 10px rgba(0, 0, 0, 0.3);
+    background: hsl(208, 59%, 41%);
+}
+
+.circle {
+    width: 24px;
+    height: 24px;
+    background: #fff;
+    border-radius: 50%;
+    transition: all 0.2s ease;
+}
+
+.icon {
+    color: hsl(51, 96%, 61%);
+    font-size: 20px;
+    margin-top: 6px;
+    transition: all 0.2s ease;
+}
+
+.input:checked ~ .circle {
+    transform: translateX(-28px);
+}
+
+.input:checked ~ .icon {
+    transform: translateX(28px);
+}
+
+.input {
+    height: 0;
+    width: 0;
+    opacity: 0;
+}

@@ -1,0 +1,48 @@
+#wrapper {
+    padding-top: 20px;
+}
+
+#wrapper .goback-btn {
+    display: block;
+    width: 80px;
+    height: 28px;
+    line-height: 28px;
+    padding: 2px 4px;
+    border-radius: 4px;
+    text-align: center;
+    font-weight: 500;
+    filter: brightness(0.9);
+    transition: filter 0.2s linear;
+}
+
+#wrapper .goback-btn:hover {
+    filter: brightness(1);
+    font-weight: bold;
+    cursor: default;
+    user-select: none;
+}
+
+#countryContainer {
+    display: flex;
+    margin-top: 30px;
+}
+
+@media screen and (max-width: 800px) {
+    #countryContainer {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.flag-country {
+    max-width: 400px;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 12px;
+    box-shadow: var( --BoxShadow);
+}
+
+.flag-country img {
+    width: 100%;
+    height: 100%;
+}
